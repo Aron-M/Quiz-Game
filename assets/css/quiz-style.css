@@ -23,6 +23,24 @@ body {
     
 }
 
-#button-list {
-    list-style: none;
+#question-content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+
+.button-options {
+ list-style: none;
+ border: none;
+ background-color: rgb(58, 56, 86);
+ box-sizing: border-box;
+ border-radius: 2rem;box-sizing: border-box;
+ height: 12vh;
+ padding-top: 2rem;
+ margin-top: 2rem;
+
+}
+
+.button-options:hover {
+    background-color: orange;
 }
