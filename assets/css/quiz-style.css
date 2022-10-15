@@ -1,0 +1,11 @@
+body {
+    background: rgb(35, 161, 64);
+}
+
+.question {
+    font-family: 'Slackey', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}
