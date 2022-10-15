@@ -9,3 +9,20 @@ body {
     justify-content: center;
     font-size: 3rem;
 }
+
+#question-block {
+    font-family: 'Bubblegum sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    border-width: 0.2rem;
+    border-color: #fff;
+    border-style: solid;
+    
+}
+
+#button-list {
+    list-style: none;
+}
