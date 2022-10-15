@@ -7,7 +7,7 @@ body {
     color: #fff;
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 #question-block {
@@ -41,6 +41,18 @@ body {
 
 }
 
+#button-4 {
+    background-color: rgb(255, 255, 255);
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-radius: 0;
+    margin-bottom: 2rem;
+}
+
+#button-4:hover {
+    background-color: rgb(50, 89, 244);
+}
+
 .button-options:hover {
-    background-color: orange;
+    background-color: rgb(50, 89, 244);
 }
