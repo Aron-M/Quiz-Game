@@ -1,3 +1,23 @@
 body {
     background: rgb(35, 35, 146);
 }
+
+#header-image {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center ;
+
+}
+
+#header {
+    font-family: slackey, sans-serif;
+    color: #fff;
+    font-size: 3.5rem;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    
+}
