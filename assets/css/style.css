@@ -19,16 +19,42 @@ body {
     width: 100%;
     text-align: center;
     margin: 0;
+    box-sizing: border-box;
     
+}
+
+#game-description {
+    font-family: 'Bubblegum sans', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    line-height: 10vw;
+    font-size: 5vw;
+    box-sizing: border-box;
 }
 
 #home-start-button {
  border: none;
+ background-color: yellow;
  border-radius: 2rem;
- width: 18rem;
- height: 8rem;
+ width: 96vw;
+ height: 28vh;
+ box-sizing: border-box;
+
 }
 
 #home-start-button:hover {
-    background-color: yellow;
+    background-color: orange;
+}
+
+#home-button-text {
+    font-family:'Bubblegum sans', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 1700;
+
+}
+
+#home-start-button
+#home-button-text {
+
 }
