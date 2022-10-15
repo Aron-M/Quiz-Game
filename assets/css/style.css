@@ -21,3 +21,14 @@ body {
     margin: 0;
     
 }
+
+#home-start-button {
+ border: none;
+ border-radius: 2rem;
+ width: 18rem;
+ height: 8rem;
+}
+
+#home-start-button:hover {
+    background-color: yellow;
+}
