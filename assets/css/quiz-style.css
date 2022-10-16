@@ -2,7 +2,7 @@ body {
     background: rgb(35, 161, 64);
 }
 
-.question {
+.question-header {
     font-family: 'Slackey', sans-serif;
     color: #fff;
     display: flex;
@@ -62,4 +62,16 @@ body {
 
 .button-options:hover {
     background-color: rgb(50, 89, 244);
+}
+
+@media (min-width: 830px) {
+
+    #question-block {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 10vh;
+        
+    }
+
 }

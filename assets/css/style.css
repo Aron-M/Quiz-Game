@@ -53,8 +53,24 @@ body {
 
 }
 
-#home-start-button
-#home-button-text {
+@media (min-width: 830px) {
+
+    #header-image {
+        box-sizing: border-box;
+        width: 30%;
+        height: 30%;
+        display: flex;
+        justify-content: center ;
+        margin-left: 35rem;
 
 }
-
+#game-description {
+    font-family: 'Bubblegum sans', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    line-height: 5vw;
+    box-sizing: border-box;
+    font-size: 3rem;
+}
+}
