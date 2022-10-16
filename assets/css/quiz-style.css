@@ -34,15 +34,22 @@ body {
  border: none;
  background-color: rgb(58, 56, 86);
  box-sizing: border-box;
- border-radius: 2rem;box-sizing: border-box;
- height: 12vh;
+ border-radius: 2rem;
+ height: 15vh;
  padding-top: 2rem;
  margin-top: 2rem;
+}
 
+.choice-text {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Bubblegum sans', sans-serif;
+    margin-bottom: 3rem;
 }
 
 #button-4 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(8, 7, 7);
     margin-left: 25vw;
     margin-right: 25vw;
     border-radius: 0;
