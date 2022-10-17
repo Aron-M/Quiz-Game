@@ -1,13 +1,16 @@
+/*retrieving HTML data to the DOM*/
 const question = document.getElementById('question-block');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 console.log(question)
 
+/*Adding variables needed*/
 let currentQuestion = {};
 let acceptingAnswers = true ;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+/*Setting up Questions array*/
 let questions = {
   questions : [
     {   question: 'What is 2 + 2 ?',
@@ -31,3 +34,4 @@ let questions = {
     }
     ]
 }
+console.log(questions)
