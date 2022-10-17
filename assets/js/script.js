@@ -1,37 +1,36 @@
-/*retrieving HTML data to the DOM*/
-const question = document.getElementById('question-block');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
-console.log(question)
-
-/*Adding variables needed*/
-let currentQuestion = {};
-let acceptingAnswers = true ;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-
-/*Setting up Questions array*/
-let questions = {
-  questions : [
-    {   question: 'What is 2 + 2 ?',
-        option1: '2',
-        option2: '4',
-        option3: '6',
-        answer: 2
+const QUESTIONS = [
+    {
+    'question': "What is 2 + 2 ??",
+    "option1":"2",
+    "option2": "4",
+    "option3": "6",
+    "correctAnswer": "4"
     },
-    {   question: 'What is 4 + 4 ?',
-        option1: '6',
-        option2: '10',
-        option3: '8',
-        answer: 3
-    },
-
-   {   question: 'What is 12 + 12 ?',
-        option1: '24',
-        option2: '14',
-        option3: '71',
-        answer: 1
+    {
+    'question': "in which continent is Japan?",
+    "option1":"Europe",
+    "option2": "Asio",
+    "option3": "America",
+    "correctAnswer": "Asia"
     }
     ]
-}
-console.log(questions)
+    let questionIndex = 0;
+
+    function displayQuestion() {
+      document.getElementById("question-content").innerHTML =  QUESTIONS[questionIndex].question
+      document.getElementById("choice-text1").innerHTML =  QUESTIONS[questionIndex].option1
+      document.getElementById("choice-text2").innerHTML =  QUESTIONS[questionIndex].option2
+      document.getElementById("choice-text3").innerHTML =  QUESTIONS[questionIndex].option3
+    }
+    displayQuestion();
+
+    function submitAnswer() {
+    }
+    function checkAnswer() {
+    }
+    function endQuiz() {
+    }
+   
+
+    /*
+    document.getElementById('submit').addHandler("click", submitAnswer)*/
