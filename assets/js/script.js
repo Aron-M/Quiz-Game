@@ -9,7 +9,7 @@ const QUESTIONS = [
     {
     'question': "in which continent is Japan?",
     "option1":"Europe",
-    "option2": "Asio",
+    "option2": "Asia",
     "option3": "America",
     "correctAnswer": "Asia"
     }
