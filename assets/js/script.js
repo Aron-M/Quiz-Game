@@ -26,10 +26,18 @@ let QUESTIONS = [
 {
     'question': "What is 51 + 117 ??",
     "option1":"168",
-    "option2": "231",
-    "option3": "112",
+    "option2": "531",
+    "option3": "110",
     "correctAnswer": "168"
       },
+
+{
+        'question': "What is 151 + 1111 ??",
+        "option1":"168",
+        "option2": "231",
+        "option3": "112",
+        "correctAnswer": "168"
+          },
 
     ]
 
@@ -50,14 +58,26 @@ let QUESTIONS = [
     // Grab element 
     // Do something with the element
     function submitAnswer(event) { 
+      document.getElementById("button-1").removeEventListener('click', submitAnswer);
+      document.getElementById("button-2").removeEventListener('click', submitAnswer);
+      document.getElementById("button-3").removeEventListener('click', submitAnswer);
       let userAnswer = event.target.innerText;
       if (checkAnswer(userAnswer)) {
         totalScore++;
         console.log('score ',totalScore)
+        questionIndex++;
         // trigger modal showing correct answer
       } else {
+        questionIndex++;
         // trigger modal showing incorrect answer
       }
+      if (questionIndex < (QUESTIONS.length)){
+        displayQuestion()
+
+      } else {
+        endQuiz()
+      }
+
       
 
     }
@@ -70,6 +90,7 @@ let QUESTIONS = [
       }
     }
     function endQuiz() {
+      //congratulate and put final score in the modal 
     }
     function test(event) {
       console.log(event)
