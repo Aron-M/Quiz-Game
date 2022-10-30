@@ -1,4 +1,4 @@
-const QUESTIONS = [
+let QUESTIONS = [
 {
     'question': "What is 2 + 2 ??",
     "option1":"2",
@@ -35,19 +35,34 @@ const QUESTIONS = [
 
 
     let questionIndex = 0;
-
+    let correctAnswer = "";
     function displayQuestion() {
-      document.getElementById("question-content").innerHTML =  QUESTIONS[questionIndex].question
-      document.getElementById("choice-text1").innerHTML =  QUESTIONS[questionIndex].option1
-      document.getElementById("choice-text2").innerHTML =  QUESTIONS[questionIndex].option2
-      document.getElementById("choice-text3").innerHTML =  QUESTIONS[questionIndex].option3
+      document.getElementById("question-content").innerHTML =  QUESTIONS[questionIndex].question;
+      document.getElementById("choice-text1").innerHTML =  QUESTIONS[questionIndex].option1;
+      document.getElementById("choice-text2").innerHTML =  QUESTIONS[questionIndex].option2;
+      document.getElementById("choice-text3").innerHTML =  QUESTIONS[questionIndex].option3;
+      correctAnswer = QUESTIONS[questionIndex].correctAnswer;
+      document.getElementById("button-1").addEventListener('click', submitAnswer);
+      document.getElementById("button-2").addEventListener('click', submitAnswer);
+      document.getElementById("button-3").addEventListener('click', submitAnswer);
     }
-    displayQuestion();
+    // Grab element 
+    // Do something with the element
+    function submitAnswer(event) { 
+      console.log(event.target.innerText);
+    }
 
-    function submitAnswer() { 
-    }
     function checkAnswer() {
     }
     function endQuiz() {
     }
-   
+    function test(event) {
+      console.log(event)
+    } 
+ 
+    
+    function startQuiz() {
+      displayQuestion();
+    };
+
+    startQuiz()
