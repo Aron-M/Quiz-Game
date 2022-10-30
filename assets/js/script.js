@@ -36,6 +36,7 @@ let QUESTIONS = [
 
     let questionIndex = 0;
     let correctAnswer = "";
+    let totalScore = 0;
     function displayQuestion() {
       document.getElementById("question-content").innerHTML =  QUESTIONS[questionIndex].question;
       document.getElementById("choice-text1").innerHTML =  QUESTIONS[questionIndex].option1;
@@ -49,10 +50,24 @@ let QUESTIONS = [
     // Grab element 
     // Do something with the element
     function submitAnswer(event) { 
-      console.log(event.target.innerText);
+      let userAnswer = event.target.innerText;
+      if (checkAnswer(userAnswer)) {
+        totalScore++;
+        console.log('score ',totalScore)
+        // trigger modal showing correct answer
+      } else {
+        // trigger modal showing incorrect answer
+      }
+      
+
     }
 
-    function checkAnswer() {
+    function checkAnswer(userAnswer) {
+      if (userAnswer === correctAnswer) {
+        return true
+      } else {
+        return false
+      }
     }
     function endQuiz() {
     }
