@@ -33,10 +33,10 @@ let QUESTIONS = [
 
 {
         'question': "What is 151 + 1111 ??",
-        "option1":"168",
-        "option2": "231",
-        "option3": "112",
-        "correctAnswer": "168"
+        "option1":"2544",
+        "option2": "831",
+        "option3": "1262",
+        "correctAnswer": "1262"
           },
 
     ]
@@ -45,6 +45,7 @@ let QUESTIONS = [
     let questionIndex = 0;
     let correctAnswer = "";
     let totalScore = 0;
+
     function displayQuestion() {
       document.getElementById("question-content").innerHTML =  QUESTIONS[questionIndex].question;
       document.getElementById("choice-text1").innerHTML =  QUESTIONS[questionIndex].option1;
@@ -77,9 +78,6 @@ let QUESTIONS = [
       } else {
         endQuiz()
       }
-
-      
-
     }
 
     function checkAnswer(userAnswer) {
