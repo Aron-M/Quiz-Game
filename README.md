@@ -1,4 +1,4 @@
-# THE POD HOUSE
+# MATH QUIZ
 
 <img src="assets/images/am-i-responsive-PP2.png" alt- Am I Responsive />
 
@@ -136,8 +136,8 @@ QUESTION 1 | QUESTION 2 | QUESTION 3
  - Color of the option buttons turn blue once hovered over, as showed in question 1.
 
 ## Questions 4,5
-
-:---:|:---:|
+QUESTION 4 | QUESTION 5
+:---:|:---:|:---:|
  ![](assets/images/question-4.png) | ![](assets/images/question-5.png) |
 
 - Notice how the difficulty of the questions increment with each passing question
