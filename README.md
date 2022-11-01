@@ -133,15 +133,20 @@ QUESTION 1 | QUESTION 2 | QUESTION 3
  :---:|:---:|:---:
  ![](assets/images/question-1.png) | ![](assets/images/question-2.png) | ![](assets/images/question-3.png)
 
-* Landing page should show the main header and include some/all (depending on device) of the 2 hero images. This is followed by 2 paragraphs of descriptive text.
+ - Color of the option buttons turn blue once hovered over, as showed in question 1.
 
-<img src="documentation/landing-page.png" alt= "Landing page" />
+## Questions 4,5
 
-## THE POD Images/features section
+:---:|:---:
+ ![](assets/images/question-4.png) | ![](assets/images/question-5.png)
 
--The FEATURES section starts with THE POD header followed by two sub-sections IMAGES and FEATURES, which include 5 images of the tiny-house's interior, followed by a list of features the guests can expect when booking the tiny-house.
+- Notice how the difficulty of the questions increment with each passing question
 
-### IMAGES SUB-SECTION
+- Once user clicks an answer for question 5, the page will be redirected to the final page.
+
+## Final Page
+
+<img src="assets/images/final-page.png" alt= "final page"></img>
 
 * First Image (KITCHEN & LIVING ROOM) is horizontal and acts as mini-hero image for this section. The following images all displays vertically afterwards.
 
