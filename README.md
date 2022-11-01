@@ -137,8 +137,8 @@ QUESTION 1 | QUESTION 2 | QUESTION 3
 
 ## Questions 4,5
 
-:---:|:---:
- ![](assets/images/question-4.png) | ![](assets/images/question-5.png)
+:---:|:---:|
+ ![](assets/images/question-4.png) | ![](assets/images/question-5.png) |
 
 - Notice how the difficulty of the questions increment with each passing question
 
@@ -148,7 +148,8 @@ QUESTION 1 | QUESTION 2 | QUESTION 3
 
 <img src="assets/images/final-page.png" alt= "final page"></img>
 
-* First Image (KITCHEN & LIVING ROOM) is horizontal and acts as mini-hero image for this section. The following images all displays vertically afterwards.
+* Final page shows a congratulations message and also *should* display the user's final score
+* At the bottom, the 'back to home' button will redirect the user back to the home page
 
 #### FOR MOBILE (280px-576px)
 * All images flows top-down starting with 'Kitchen & Living Room' image, ending with 'Shower & Sink'
