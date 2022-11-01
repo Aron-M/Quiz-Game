@@ -127,11 +127,11 @@ To test various screen-size responsiveness.
     
 <hr>
 
-## Questions 1,2,3
+## Questions 1,2,
 
-QUESTION 1 | QUESTION 2 | QUESTION 3
- :---:|:---:|:---:
- ![](assets/images/question-1.png.png) | ![](assets/images/question-2.png) | ![](assets/images/question-3.png)
+QUESTION 1 | QUESTION 2 
+ :---:|:---:
+ ![](assets/images/question-1.png.png) | ![](assets/images/question-2.png) 
 
 * Landing page should show the main header and include some/all (depending on device) of the 2 hero images. This is followed by 2 paragraphs of descriptive text.
 
