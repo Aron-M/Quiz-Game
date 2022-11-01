@@ -46,6 +46,7 @@ let correctAnswer = "";
 let totalScore = 0;
 let questionNumber = 1;
 const questionNumContainer = document.getElementById("question-1");
+let link = document.createElement('link');
 
 function displayQuestion() { 
   document.getElementById("question-content").innerHTML = QUESTIONS[questionIndex].question;
@@ -105,6 +106,7 @@ function checkAnswer(userAnswer) {
 }
 
 function endQuiz() {
+  window.location.href = "final-score-congrats.html";
   //congratulate and put final score 
 }
 
