@@ -45,10 +45,11 @@ let questionIndex = 0;
 let correctAnswer = "";
 let totalScore = 0;
 let questionNumber = 1;
+let userAnswer = 0;
 const questionNumContainer = document.getElementById("question-1");
 let link = document.createElement('link');
 
-function displayQuestion() { 
+function displayQuestion() {
   document.getElementById("question-content").innerHTML = QUESTIONS[questionIndex].question;
   document.getElementById("choice-text1").innerHTML = QUESTIONS[questionIndex].option1;
   document.getElementById("choice-text2").innerHTML = QUESTIONS[questionIndex].option2;
@@ -58,7 +59,7 @@ function displayQuestion() {
   document.getElementById("button-2").addEventListener('click', submitAnswer);
   document.getElementById("button-3").addEventListener('click', submitAnswer);
   displayQuestionNumber();
-  
+
 }
 
 // Grab element 
@@ -69,18 +70,18 @@ function submitAnswer(event) {
   document.getElementById("button-2").removeEventListener('click', submitAnswer);
   document.getElementById("button-3").removeEventListener('click', submitAnswer);
   let userAnswer = event.target.innerText;
-  if ((userAnswer)) {
+  if (checkAnswer(userAnswer)) {
     questionNumber++;
   }
-  
+
   if (checkAnswer(userAnswer)) {
     totalScore++;
     console.log('score ', totalScore)
     questionIndex++;
-    
+
   } else {
     questionIndex++;
- 
+
   }
   if (questionIndex < (QUESTIONS.length)) {
     displayQuestion()
@@ -90,12 +91,12 @@ function submitAnswer(event) {
   }
 }
 
- function displayQuestionNumber() {
+function displayQuestionNumber() {
   questionNumContainer.innerText = "QUESTION " + questionNumber;
   if (checkAnswer(userAnswer)) {
-      questionNumber++;
-    }
+    questionNumber++;
   }
+}
 
 function checkAnswer(userAnswer) {
   if (userAnswer === correctAnswer) {
@@ -105,14 +106,20 @@ function checkAnswer(userAnswer) {
   }
 }
 
+
+
+
 function endQuiz() {
+  localStorage.setItem('totalScore', totalScore);
   window.location.href = "final-score-congrats.html";
+  document.getElementById("final-score-display").innerHTML = totalScore.length;
+  totalScore = (checkAnswer(userAnswer));
   //congratulate and put final score 
 }
 
 function startQuiz() {
   displayQuestion();
-  
+
 };
 
 startQuiz()
