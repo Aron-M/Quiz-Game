@@ -76,7 +76,7 @@ function submitAnswer(event) {
 
   if (checkAnswer(userAnswer)) {
     totalScore++;
-    console.log('score ', totalScore)
+    console.log('score ', totalScore);
     questionIndex++;
 
   } else {
@@ -84,10 +84,10 @@ function submitAnswer(event) {
 
   }
   if (questionIndex < (QUESTIONS.length)) {
-    displayQuestion()
+    displayQuestion();
 
   } else {
-    endQuiz()
+    endQuiz();
   }
 }
 
@@ -100,9 +100,9 @@ function displayQuestionNumber() {
 
 function checkAnswer(userAnswer) {
   if (userAnswer === correctAnswer) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -119,6 +119,6 @@ function endQuiz() {
 function startQuiz() {
   displayQuestion();
 
-};
+}
 
-startQuiz()
+startQuiz();

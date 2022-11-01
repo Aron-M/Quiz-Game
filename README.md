@@ -125,7 +125,11 @@ To test various screen-size responsiveness.
         PLEASE NOTE: Color of button turns orange when hovered over
 
     
-<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 ## Questions 1,2,3
 
@@ -136,9 +140,10 @@ QUESTION 1 | QUESTION 2 | QUESTION 3
  - Color of the option buttons turn blue once hovered over, as showed in question 1.
 
 ## Questions 4,5
-QUESTION 4 | QUESTION 5
-:---:|:---:|:---:|
- ![](assets/images/question-4.png) | ![](assets/images/question-5.png) |
+
+QUESTION 4 | QUESTION 5 
+ :---:|:---:
+ ![](assets/images/question-4.png) | ![](assets/images/question-5.png) 
 
 - Notice how the difficulty of the questions increment with each passing question
 
@@ -146,144 +151,84 @@ QUESTION 4 | QUESTION 5
 
 ## Final Page
 
-<img src="assets/images/final-page.png" alt= "final page"></img>
+FINAL PAGE | FINAL PAGE ERROR
+ :---:|:---:
+ ![](assets/images/final-page.png) | ![](assets/images/final-page-error.png)
 
-* Final page shows a congratulations message and also *should* display the user's final score
-* At the bottom, the 'back to home' button will redirect the user back to the home page
+* Final page shows a congratulations message and also *should* display the user's final score.
+* At the bottom, the 'back to home' button will redirect the user back to the home page.
+* Notice that 'back to home' button wil turn black when hovered over.
 
-#### FOR MOBILE (280px-576px)
-* All images flows top-down starting with 'Kitchen & Living Room' image, ending with 'Shower & Sink'
+### ERROR!
+* On the right hand side screenshot of final page you will see there is no score displayed.
+This is because I was not able to figure out how to do it. JavaScript is still too dificult for me and I ran out of time trying to figure out everything I needed to do for this project.
 
-#### FOR TABLET (576px-830px)
-* Mini-hero image stays at the top and the other 4 images are then wrapped to show in rows of 2 each.
+<br>
+<br>
+<br>
+<br>
+<br>
 
-#### FOR FULL SCREEN (830px-1000px)
+## FOR MOBILE (360px-740px)
 
-* All images are flexed in a row order stretching from left to right
-
-MOBILE | TABLET | FULL SCREEN 
+HOME PAGE | QUESTION PAGE | FINAL PAGE
  :---:|:---:|:---:
- ![](documentation/mobile-images.png) | ![](documentation/tablet-images.png) | ![](documentation/images-full-screen.png)
+ ![](assets/images/home-page-mobile.png) | ![](assets/images/question-page-mobile.png) | ![](assets/images/final-page-mobile.png)
 
-### FEATURES LIST SUB-SECTION
+* All images flows top-down
+* App designed for Samsung Galaxy S8+ and bigger
 
-* The FEATURES LIST is the second part of THE POD section. The list includes 6 features, each containing an icon abtained at Fontawesome.
+<br>
+<br>
+<br>
 
- MOBILE | TABLET | FULL SCREEN 
+## FOR TABLET (830px-1140px)
+
+HOME PAGE | QUESTION PAGE | FINAL PAGE
  :---:|:---:|:---:
- ![](documentation/includes-mobile.png) | ![](documentation/includes-tablet.png) | ![](documentation/includes-fullscreen.png)
+ ![](assets/images/tablet-home-page.png) | ![](assets/images/tablet-question-page.png) | ![](assets/images/tablet-final-page.png)
 
-## 'THINGS TO DO' SECTION
+* Layout is fairly similar to full screen layout
 
-This section includes 6 images of various activities and things to do within the nearby area of the tiny-house. This provides information to the user of what they can look forward to doing around the nearby area.
-
-* PLEASE NOTE: These images were sourced from FONTAWESOME and converted to .jpegs due to needing some of the icons' background colour within the icon in order to match the background of the webpgae. I did that by editing the downloaded icon and changing it in MS Paint, and then uploading those .jpegs to the 'assets' folder.
-
-* All images were captioned directly uderneath the image.
-
-MOBILE | TABLET | FULL SCREEN 
- :---:|:---:|:---:
- ![](documentation/thingstodo-mobile.png) | ![](documentation/thingstodo-tablet.png) | ![](documentation/thingstodo-fullscreen.png)
-
-## BOOKING SECTION
-
-#### FOR MOBILE
-
-Booking form is implimented fairly basic, with NAME; EMAIL; DATE FROM; DATE TO; MESSAGE.
-
-#### FOR TABLET
-
-Layout keeps the same design and only stretches out a bit as the screen widens.
-
-#### FOR PC
-
-Layout stays the same, however LOCATION section moves to the right of the form section.
-
-MOBILE | TABLET | FULL SCREEN 
- :---:|:---:|:---:
- ![](documentation/booking-mobile.png) | ![](documentation/booking-tablet.png) | ![](documentation/booking-fullscreen.png)
-
-
-#### BOOKING DISPLAY ERROR:
-
-<img src="documentation/booking-error.png" alt="booking-display-error" />
-
-The DATES area should have had clearer directions, and should have been displayed as shown below.
-
-#### FORM:
-
-The form is responsive, with a message indicating that the useer's booking was succesful, and with a button to revert the user back to the main webpage.
-
-<img src="documentation/form-return.png" alt="form-return" />
-
-#### FORM DESIGN ERROR:
-
-The design of the form return page is functional, however poorly designed and can be better styled. The return button especially was very hastily done due to time constraints.
-
-## LOCATION SECTION
-
-#### MOBILE
-
-Location section sits right at the bottom, with address attached at the top of the map.
-Map was retrieved from Google Maps.
-
-#### TABLET
-
-Location section is at the bottom, hugging the footer, with address attached at the top of the map.
-
-#### FULL SCREEN
-
-Location moves to the right of the row shared with the booking form.
-
-MOBILE | TABLET | FULL SCREEN 
- :---:|:---:|:---:
- ![](documentation/location-mobile.png) | ![](documentation/location-tablet.png) | ![](documentation/booking-fullscreen.png)
-
-#### FOOTER
-
-Footer has been done styled with the same green background. Social media links have been added, however the links only go to the home pages of each platform.
-
-<img src="documentation/footer.png" alt="footer" />
+<br>
+<br>
+<br>
 
 ## KNOWN BUGS
 
-As shown previously, there have been a fair few bugs identified and could not be rectified due to time constraints, namely:
+As shown previously, there is a big bug regarding the final score not showing
 
-* Sticky nav-bar has 'POD HOUSE' logo that doesn't stick to the left as screen size changes.
-* Sticky bar hovers over every H1 anchored to the nav-icon within the sticky header.
-* Form dates does not clearly convey 'TO' and 'FROM' information at each bar.
-* Form return page is not well designed, and the 'return to main page' button is not styled to look like a button.
-* A certain amount of CSS style rules within the code have not been cleaned up. Some style rules can be seen as redundant, overriding and/or unneccessary. 
-* Validator errors have not been fixed due to time constraints.
+* I am currently struggling to find out how to display the final score onto any type of DOM.
+* In the case of this project, I also have the added difficulty to try and display the total score onto a newly created HTML file that is dedicated to displaying everything regarding the final page.
+* I don't know if my lack of knowledge in how to do this counts as a bug, however, it still proves to be an incomplete application due to my inability to make the JS do what I want it to.
 
 
 #### VALIDATOR
 
-<img src="documentation/validator-errors.png" alt="validator errors" />
+<img src="assets/images/w3s-validator-page.png" alt="validator-page" />
+<img src="assets/images/jshint-validator.png" alt="validator-page-jshint" />
 
-Validator errors, were unfortunately not rectified due to time constraints.
+
+Validator errors in JS Hint, were unfortunately not rectified due to time constraints.
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # DISCLAIMER
 
-During the creation of this webpage, I have encountered various learning curves where I have had to pivot and start again from the beginning. To be more specific, it happened twice where I stopped midway through creation to start fresh.
+During the creation of this webpage, I have encountered an incredible amount of obstacles due to my own ineptitude and inability to understand the basics of JavaScript. I struggled, and still right now struggle to grasp the way JavaScript code is supposed to be laid out and when to execute which functions. 
+<br>
+In my commit history you will see a 2 week gap between the 16th and 30th of October. This is because I had to leave my proect and go re-learn all the comparative programming and JS course material from scratch,as I was completely overwhelmed by the new information I had to learn for JS. I still am not sure how I was even able to get this application to work the way it does, and I doubt I will be able to re-create such an application at all.
+<br>
+I assume not being able to display the final score will result in failure
 
-One of the main reasons were to change from full-screen-first to rather start developing from mobile-first.
-In doing so, I then started a new repository and copied my old code as I saw fit within the new repository.
 
-Therefore a big percentage of my commit history will not be shown within my final draft.
-
-Here, I have attached the two previous attempts for your perusal. Here you will see the bulk of my previous commits and how the webpage grew from attempt to attempt, with code changing as I learnt better ways to achieve what I wanted to set out for.
-
-#### ATTEMPT 1:
-
-https://aronm-ballyconnellattr-dmo4rqa51ga.ws-eu67.gitpod.io/
-
-#### ATTEMPT 2:
-
-https://aronm-podhouseholidayr-nl656b9zy87.ws-eu67.gitpod.io/
-
-Here you will see the progress of how the site developed, with access to my commit history.
-
+<br>
+<br>
+<br>
 
 # Deployment
 Following writing the code then commiting and pushing to GitHub, this project was deployed using GitHub by the following steps.
@@ -297,12 +242,10 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 
 # Credits:
 
-- Slack Community members such as Mr. Bim, Dave Horrocks, John Traas, Matt Bodden and Daisy_mentor for selflessly helping me with queries and questions.
-- [Rohit Sharma](https://github.com/rohit_mentor) My helpful mentor.
-- [Simen Daehlin](https://github.com/Eventyret) for helpful Masterclasses.
-- [Google Maps](https://www.google.com/maps/) for google maps.
-- [screenfly](https://screenfly.org/) for testing my website).
+- Slack Community member Matt Bodden and Daisy_mentor for selflessly helping me with queries and questions.
+
 - [Fontawesome](https://fontawesome.com/kits) for icons.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
+- Youtube
 
