@@ -22,6 +22,7 @@ MATH QUIZ is a web application designed to test a user's knowledge in addition-b
 * Create a quiz based challenge for the user
 * Provide various multiple choice questions
 * Include a variety of options too choose an answer from.
+* The difficulty of the questions to increase with each following question.
 * Have the user be able to answer all questions in succession.
 * Provide the user with a final score.
 * Let the user be able to revert back to the start if they choose to do the quiz again.
@@ -116,27 +117,21 @@ To test various screen-size responsiveness.
     <img src="assets/images/quiz-home-page-one.png" alt= "home page"></img>
 
 
-    - ERROR 1 ON TABLET AND PC DEVICES:
+    - START BUTTON:
 
-     <img src="documentation/tablet-pc-nav-error.png" alt="nav bar error" />
-
-
-        PLEASE NOTE: ERROR has occured where "THE POD HOUSE" logo does not stick to the left as the dimensions become bigger at tablet and pc display.
-
-    - ERROR 2 ON ALL DEVICES
-
-    <img src="documentation/anchor-error.png" alt="nav bar error" />
-
-        PLEASE NOTE: ERROR has occured where the sticky-nav bar falls over the intended anchored element, causing the  anchored H1 elements not too display at the top
+     <img src="assets/images/quiz-home-page-click-button.png" alt="start button" />
 
 
-    - How it should be: 
+        PLEASE NOTE: Color of button turns orange when hovered over
 
-    <img src="documentation/anchor-correct.png" alt="nav bar error" />    
-
+    
 <hr>
 
-## Landing Page
+## Questions 1,2,3
+
+QUESTION 1 | QUESTION 2 | QUESTION 3
+ :---:|:---:|:---:
+ ![](assets/images/question-1.png.png) | ![](assets/images/question-2.png) | ![](assets/images/question-3.png)
 
 * Landing page should show the main header and include some/all (depending on device) of the 2 hero images. This is followed by 2 paragraphs of descriptive text.
 

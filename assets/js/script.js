@@ -70,7 +70,7 @@ function submitAnswer(event) {
   document.getElementById("button-2").removeEventListener('click', submitAnswer);
   document.getElementById("button-3").removeEventListener('click', submitAnswer);
   let userAnswer = event.target.innerText;
-  if (checkAnswer(userAnswer)) {
+  if ((userAnswer)) {
     questionNumber++;
   }
 
@@ -93,7 +93,7 @@ function submitAnswer(event) {
 
 function displayQuestionNumber() {
   questionNumContainer.innerText = "QUESTION " + questionNumber;
-  if (checkAnswer(userAnswer)) {
+  if ((userAnswer)) {
     questionNumber++;
   }
 }
@@ -110,10 +110,9 @@ function checkAnswer(userAnswer) {
 
 
 function endQuiz() {
-  localStorage.setItem('totalScore', totalScore);
   window.location.href = "final-score-congrats.html";
-  document.getElementById("final-score-display").innerHTML = totalScore.length;
-  totalScore = (checkAnswer(userAnswer));
+
+
   //congratulate and put final score 
 }
 
