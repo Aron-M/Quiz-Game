@@ -115,6 +115,7 @@ function checkAnswer(userAnswer) {
 
 //function to end the quiz
 function endQuiz() {
+  localStorage.setItem("totalScore",totalScore);
   window.location.href = "final-score-congrats.html";
 
 
