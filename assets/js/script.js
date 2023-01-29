@@ -1,3 +1,5 @@
+//series of questions with multiple choice options for quiz
+
 let QUESTIONS = [{
     'question': "What is 2 + 2 ?",
     "option1": "2",
@@ -40,6 +42,7 @@ let QUESTIONS = [{
 
 ]
 
+//global variables for setting up the quiz
 
 let questionIndex = 0;
 let correctAnswer = "";
@@ -48,6 +51,8 @@ let questionNumber = 1;
 let userAnswer = 0;
 const questionNumContainer = document.getElementById("question-1");
 let link = document.createElement('link');
+
+//function designed to display questions and provide the multiple choice options
 
 function displayQuestion() {
   document.getElementById("question-content").innerHTML = QUESTIONS[questionIndex].question;
@@ -90,14 +95,14 @@ function submitAnswer(event) {
     endQuiz();
   }
 }
-
+//displaying question numbers
 function displayQuestionNumber() {
   questionNumContainer.innerText = "QUESTION " + questionNumber;
   if ((userAnswer)) {
     questionNumber++;
   }
 }
-
+//checking if user answer is the same as the correct answer
 function checkAnswer(userAnswer) {
   if (userAnswer === correctAnswer) {
     return true;
@@ -108,7 +113,7 @@ function checkAnswer(userAnswer) {
 
 
 
-
+//function to end the quiz
 function endQuiz() {
   window.location.href = "final-score-congrats.html";
 
