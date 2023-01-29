@@ -118,7 +118,13 @@ function endQuiz() {
   window.location.href = "final-score-congrats.html";
 
 
-  //congratulate and put final score 
+//congratulate and put final score 
+function finalScore() {
+  if (questionNumber >= 5) {
+    window.location.href = "final-score-congrats.html";
+    return totalScore
+  }
+}
 }
 
 function startQuiz() {
