@@ -194,36 +194,23 @@ HOME PAGE | QUESTION PAGE | FINAL PAGE
 <br>
 <br>
 
-## KNOWN BUGS
+## TESTING
 
-As shown previously, there is a big bug regarding the final score not showing
+As shown previously, there was a big bug regarding the final score not showing
 
-* I am currently struggling to find out how to display the final score onto any type of DOM.
-* In the case of this project, I also have the added difficulty to try and display the total score onto a newly created HTML file that is dedicated to displaying everything regarding the final page.
-* I don't know if my lack of knowledge in how to do this counts as a bug, however, it still proves to be an incomplete application due to my inability to make the JS do what I want it to.
+* I have since done extensive research and figured out how to add the final score.
+* Validation has been done on both the CSS, with W3Schools, and for JavaScript with JSHint
+* On this occasion there is no known bugs and all validators show that the code is running without any errors.
 
 
 #### VALIDATOR
 
 <img src="assets/images/w3s-validator-page.png" alt="validator-page" />
-<img src="assets/images/jshint-validator.png" alt="validator-page-jshint" />
+<img src="assets/images/jshint-script.png" alt="validator-page-jshint" />
 
 
-Validator errors in JS Hint, were unfortunately not rectified due to time constraints.
+Validator JSHint shows no errors however only two warnings of unused functions.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-# DISCLAIMER
-
-During the creation of this webpage, I have encountered an incredible amount of obstacles due to my own ineptitude and inability to understand the basics of JavaScript. I struggled, and still right now struggle to grasp the way JavaScript code is supposed to be laid out and when to execute which functions. 
-<br>
-In my commit history you will see a 2 week gap between the 16th and 30th of October. This is because I had to leave my proect and go re-learn all the comparative programming and JS course material from scratch,as I was completely overwhelmed by the new information I had to learn for JS. I still am not sure how I was even able to get this application to work the way it does, and I doubt I will be able to re-create such an application at all.
-<br>
-I assume not being able to display the final score will result in failure
 
 
 <br>
@@ -246,6 +233,7 @@ Following writing the code then commiting and pushing to GitHub, this project wa
 
 - [Fontawesome](https://fontawesome.com/kits) for icons.
 - [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
+- [JS Hint](https://jshint.com/) validating code for JS script file.
 - [AmIresponsive](https://ui.dev/amiresponsive) for responsive look of my website.
 - Youtube
 
