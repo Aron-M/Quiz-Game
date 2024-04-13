@@ -29,12 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to hide home screen and show quiz screen
-    function startQuiz() {
-        homeScreen.style.display = 'none';
-        quizScreen.style.display = 'block';
-        loadQuestions(); // Load questions when quiz starts
-    }
+// Function to hide home screen and show quiz screen
+// Function to hide home screen and show quiz screen
+function startQuiz() {
+    // Hide the home-screen content
+    homeScreen.classList.add('d-none');
+    
+    // Show the quiz-screen content
+    quizScreen.classList.remove('d-none');
+    
+    // Load questions
+    loadQuestions(); // Load questions when quiz starts
+}
+
+
+    
 
     // Add event listener to start button
     startButton.addEventListener('click', startQuiz);
