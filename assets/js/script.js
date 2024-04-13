@@ -1,136 +1,131 @@
-//series of questions with multiple choice options for quiz
-
+// Series of questions with multiple choice options for quiz
 let QUESTIONS = [{
-    'question': "What is 2 + 2 ?",
-    "option1": "2",
-    "option2": "4",
-    "option3": "6",
-    "correctAnswer": "4"
-  },
-
-  {
-    'question': "What is 5 + 7 ?",
-    "option1": "6",
-    "option2": "31",
-    "option3": "12",
-    "correctAnswer": "12"
-  },
-
-  {
-    'question': "What is 15 + 27 ?",
-    "option1": "36",
-    "option2": "315",
-    "option3": "42",
-    "correctAnswer": "42"
-  },
-
-  {
-    'question': "What is 51 + 117 ?",
-    "option1": "168",
-    "option2": "531",
-    "option3": "110",
-    "correctAnswer": "168"
-  },
-
-  {
-    'question': "What is 151 + 1111 ?",
-    "option1": "2544",
-    "option2": "831",
-    "option3": "1262",
-    "correctAnswer": "1262"
-  },
-
-]
-
-//global variables for setting up the quiz
-
-let questionIndex = 0;
-let correctAnswer = "";
-let totalScore = 0;
-let questionNumber = 1;
-let userAnswer = 0;
-const questionNumContainer = document.getElementById("question-1");
-let link = document.createElement('link');
-
-//function designed to display questions and provide the multiple choice options
-
-function displayQuestion() {
-  document.getElementById("question-content").innerHTML = QUESTIONS[questionIndex].question;
-  document.getElementById("choice-text1").innerHTML = QUESTIONS[questionIndex].option1;
-  document.getElementById("choice-text2").innerHTML = QUESTIONS[questionIndex].option2;
-  document.getElementById("choice-text3").innerHTML = QUESTIONS[questionIndex].option3;
-  correctAnswer = QUESTIONS[questionIndex].correctAnswer;
-  document.getElementById("button-1").addEventListener('click', submitAnswer);
-  document.getElementById("button-2").addEventListener('click', submitAnswer);
-  document.getElementById("button-3").addEventListener('click', submitAnswer);
-  displayQuestionNumber();
-
+  'question': "What is 2 + 2 ?",
+  "option1": "2",
+  "option2": "4",
+  "option3": "6",
+  "correctAnswer": "4"
+},
+{
+  'question': "What is 5 + 7 ?",
+  "option1": "6",
+  "option2": "31",
+  "option3": "12",
+  "correctAnswer": "12"
+},
+{
+  'question': "What is 15 + 27 ?",
+  "option1": "36",
+  "option2": "315",
+  "option3": "42",
+  "correctAnswer": "42"
+},
+{
+  'question': "What is 51 + 117 ?",
+  "option1": "168",
+  "option2": "531",
+  "option3": "110",
+  "correctAnswer": "168"
+},
+{
+  'question': "What is 151 + 1111 ?",
+  "option1": "2544",
+  "option2": "831",
+  "option3": "1262",
+  "correctAnswer": "1262"
 }
+];
 
-// Grab element 
-// Do something with the element
+document.addEventListener('DOMContentLoaded', function() {
+  const homeScreen = document.getElementById('home-screen');
+  const quizScreen = document.getElementById('quiz-screen');
+  const startButton = document.getElementById('start-button');
 
-function submitAnswer(event) {
-  document.getElementById("button-1").removeEventListener('click', submitAnswer);
-  document.getElementById("button-2").removeEventListener('click', submitAnswer);
-  document.getElementById("button-3").removeEventListener('click', submitAnswer);
-  let userAnswer = event.target.innerText;
-  if ((userAnswer)) {
-    questionNumber++;
+  // Function to hide home screen and show quiz screen
+  function startQuiz() {
+      homeScreen.style.display = 'none';
+      quizScreen.style.display = 'block';
+      displayQuestion();
   }
 
-  if (checkAnswer(userAnswer)) {
-    totalScore++;
-    console.log('score ', totalScore);
-    questionIndex++;
+  // Add event listener to start button
+  startButton.addEventListener('click', startQuiz);
 
-  } else {
-    questionIndex++;
+  // Global variables for setting up the quiz
+  let questionIndex = 0;
+  let correctAnswer = "";
+  let totalScore = 0;
+  let questionNumber = 1;
+  let userAnswer = 0;
+  const questionNumContainer = document.getElementById("question-1");
+  let link = document.createElement('link');
 
+  // Function designed to display questions and provide the multiple choice options
+  function displayQuestion() {
+      // Remove previous event listeners
+      document.getElementById("button-1").removeEventListener('click', submitAnswer);
+      document.getElementById("button-2").removeEventListener('click', submitAnswer);
+      document.getElementById("button-3").removeEventListener('click', submitAnswer);
+
+      // Get the current question object from the QUESTIONS array
+      const currentQuestion = QUESTIONS[questionIndex];
+
+      // Display the question content
+      document.getElementById("question-content").textContent = currentQuestion.question;
+
+      // Display the options
+      document.getElementById("button-1").textContent = currentQuestion.option1;
+      document.getElementById("button-2").textContent = currentQuestion.option2;
+      document.getElementById("button-3").textContent = currentQuestion.option3;
+
+      // Set the correct answer for this question
+      correctAnswer = currentQuestion.correctAnswer;
+
+      // Add event listeners to option buttons
+      document.getElementById("button-1").addEventListener('click', submitAnswer);
+      document.getElementById("button-2").addEventListener('click', submitAnswer);
+      document.getElementById("button-3").addEventListener('click', submitAnswer);
+
+      // Display the question number
+      questionNumContainer.innerText = "QUESTION " + questionNumber;
   }
-  if (questionIndex < (QUESTIONS.length)) {
-    displayQuestion();
 
-  } else {
-    endQuiz();
+  // Function to submit an answer
+  function submitAnswer(event) {
+      let userAnswer = event.target.innerText;
+      if ((userAnswer)) {
+          questionNumber++;
+      }
+
+      if (checkAnswer(userAnswer)) {
+          totalScore++;
+          console.log('score ', totalScore);
+          questionIndex++;
+
+      } else {
+          questionIndex++;
+
+      }
+      if (questionIndex < (QUESTIONS.length)) {
+          displayQuestion();
+
+      } else {
+          endQuiz();
+      }
   }
-}
-//displaying question numbers
-function displayQuestionNumber() {
-  questionNumContainer.innerText = "QUESTION " + questionNumber;
-  if ((userAnswer)) {
-    questionNumber++;
+
+  // Checking if user answer is the same as the correct answer
+  function checkAnswer(userAnswer) {
+      if (userAnswer === correctAnswer) {
+          return true;
+      } else {
+          return false;
+      }
   }
-}
-//checking if user answer is the same as the correct answer
-function checkAnswer(userAnswer) {
-  if (userAnswer === correctAnswer) {
-    return true;
-  } else {
-    return false;
+
+  // Function to end the quiz
+  function endQuiz() {
+      localStorage.setItem("totalScore", totalScore);
+      window.location.href = "final-score-congrats.html";
   }
-}
-
-
-
-//function to end the quiz
-function endQuiz() {
-  localStorage.setItem("totalScore",totalScore);
-  window.location.href = "final-score-congrats.html";
-
-
-//congratulate and put final score 
-function finalScore() {
-  if (questionNumber >= 5) {
-    window.location.href = "final-score-congrats.html";
-    return totalScore
-  }
-}
-}
-
-function startQuiz() {
-  displayQuestion();
-
-}
-
-startQuiz();
+});
