@@ -9,6 +9,7 @@ let questionNumContainer; // Define questionNumContainer globally
 document.addEventListener('DOMContentLoaded', function() {
     const homeScreen = document.getElementById('home-screen');
     const quizScreen = document.getElementById('quiz-screen');
+    const congratsScreen = document.getElementById('congrats-screen');
     const startButton = document.getElementById('start-button');
 
     let questions = []; // Array to store questions
@@ -110,7 +111,8 @@ function startQuiz() {
     // Function to end the quiz
     function endQuiz() {
         localStorage.setItem("totalScore", totalScore);
-        window.location.href = "final-score-congrats.html";
+        quizScreen.classList.add('d-none');
+        congratsScreen.classList.remove('d-none');
     }
 
     // Get the container for question number
