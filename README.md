@@ -6,6 +6,40 @@ https://aron-m.github.io/SLIGO-POD-HOUSE-RENTAL-MOBILE-FIRST/
 
 MATH QUIZ is a web application designed to test a user's knowledge in addition-based mathematics by presenting a multiple choice quiz, consisting of 5 questions, each containing 3 options as answers. The user must attempt to answer as many questions correctly to test their aptitude.
 
+# UPDATE: Quiz Game - Version 2
+
+## Overview
+
+This is version 2 of the Quiz Game, a simple web-based quiz application. In this version, several improvements and changes have been made to enhance the functionality and user experience of the game.
+
+## Changes in Version 2
+
+### Refactored Code Logic
+
+- The code logic has been refactored to be more minimal and organized, improving readability and maintainability.
+- Functions have been optimized and modularized to enhance code reusability.
+
+### Consolidated Page Layout
+
+- The page layout has been updated to consolidate all content into a single HTML page, improving simplicity and reducing complexity.
+- Bootstrap 5.3 has been incorporated to handle styling, providing a clean and modern look to the game.
+
+## Features
+
+- Interactive quiz gameplay with multiple-choice questions.
+- Dynamic question loading from an external JSON file.
+- Real-time scoring and feedback for user responses.
+- Final score display and congratulations message at the end of the quiz.
+
+## Future Features
+
+- Questions to be randomly selected.
+- Stats collection box to display amount of wrong and correct answers, questions remaining.
+- High Scores
+- More styling with interactive pop-ups to display result of each answer
+
+# Version 1: Initial
+
 ## User Experience (UX)
 ## User Stories
 
