@@ -1,131 +1,109 @@
-// Series of questions with multiple choice options for quiz
-let QUESTIONS = [{
-  'question': "What is 2 + 2 ?",
-  "option1": "2",
-  "option2": "4",
-  "option3": "6",
-  "correctAnswer": "4"
-},
-{
-  'question': "What is 5 + 7 ?",
-  "option1": "6",
-  "option2": "31",
-  "option3": "12",
-  "correctAnswer": "12"
-},
-{
-  'question': "What is 15 + 27 ?",
-  "option1": "36",
-  "option2": "315",
-  "option3": "42",
-  "correctAnswer": "42"
-},
-{
-  'question': "What is 51 + 117 ?",
-  "option1": "168",
-  "option2": "531",
-  "option3": "110",
-  "correctAnswer": "168"
-},
-{
-  'question': "What is 151 + 1111 ?",
-  "option1": "2544",
-  "option2": "831",
-  "option3": "1262",
-  "correctAnswer": "1262"
-}
-];
+// Global variables
+let questionIndex = 0;
+let correctAnswer = "";
+let totalScore = 0;
+let questionNumber = 1;
+let userAnswer = 0;
+let questionNumContainer; // Define questionNumContainer globally
 
 document.addEventListener('DOMContentLoaded', function() {
-  const homeScreen = document.getElementById('home-screen');
-  const quizScreen = document.getElementById('quiz-screen');
-  const startButton = document.getElementById('start-button');
+    const homeScreen = document.getElementById('home-screen');
+    const quizScreen = document.getElementById('quiz-screen');
+    const startButton = document.getElementById('start-button');
 
-  // Function to hide home screen and show quiz screen
-  function startQuiz() {
-      homeScreen.style.display = 'none';
-      quizScreen.style.display = 'block';
-      displayQuestion();
-  }
+    let questions = []; // Array to store questions
 
-  // Add event listener to start button
-  startButton.addEventListener('click', startQuiz);
+    // Function to load questions from JSON file
+    async function loadQuestions() {
+        try {
+            const response = await fetch('assets/questions/questions.json');
+            if (!response.ok) {
+                throw new Error('Failed to load questions');
+            }
+            questions = await response.json();
+            displayQuestion(); // Call displayQuestion after questions are loaded
+        } catch (error) {
+            console.error('Error loading questions:', error);
+            // Display error message to the user
+            questionContent.textContent = 'Error loading questions. Please try again later.';
+        }
+    }
 
-  // Global variables for setting up the quiz
-  let questionIndex = 0;
-  let correctAnswer = "";
-  let totalScore = 0;
-  let questionNumber = 1;
-  let userAnswer = 0;
-  const questionNumContainer = document.getElementById("question-1");
-  let link = document.createElement('link');
+    // Function to hide home screen and show quiz screen
+    function startQuiz() {
+        homeScreen.style.display = 'none';
+        quizScreen.style.display = 'block';
+        loadQuestions(); // Load questions when quiz starts
+    }
 
-  // Function designed to display questions and provide the multiple choice options
-  function displayQuestion() {
-      // Remove previous event listeners
-      document.getElementById("button-1").removeEventListener('click', submitAnswer);
-      document.getElementById("button-2").removeEventListener('click', submitAnswer);
-      document.getElementById("button-3").removeEventListener('click', submitAnswer);
+    // Add event listener to start button
+    startButton.addEventListener('click', startQuiz);
 
-      // Get the current question object from the QUESTIONS array
-      const currentQuestion = QUESTIONS[questionIndex];
+    // Function to display questions and provide the multiple choice options
+    function displayQuestion() {
+        // Get the current question object from the QUESTIONS array
+        const currentQuestion = questions[questionIndex];
 
-      // Display the question content
-      document.getElementById("question-content").textContent = currentQuestion.question;
+        // Display the question content
+        document.getElementById("question-content").textContent = currentQuestion.question;
 
-      // Display the options
-      document.getElementById("button-1").textContent = currentQuestion.option1;
-      document.getElementById("button-2").textContent = currentQuestion.option2;
-      document.getElementById("button-3").textContent = currentQuestion.option3;
+        // Display the options
+        const options = currentQuestion.options;
+        for (let i = 0; i < options.length; i++) {
+            document.getElementById(`button-${i + 1}`).textContent = options[i];
+        }
 
-      // Set the correct answer for this question
-      correctAnswer = currentQuestion.correctAnswer;
+        // Set the correct answer for this question
+        correctAnswer = currentQuestion.correctAnswer;
 
-      // Add event listeners to option buttons
-      document.getElementById("button-1").addEventListener('click', submitAnswer);
-      document.getElementById("button-2").addEventListener('click', submitAnswer);
-      document.getElementById("button-3").addEventListener('click', submitAnswer);
+        // Add event listeners to option buttons
+        document.getElementById("button-1").addEventListener('click', submitAnswer);
+        document.getElementById("button-2").addEventListener('click', submitAnswer);
+        document.getElementById("button-3").addEventListener('click', submitAnswer);
 
-      // Display the question number
-      questionNumContainer.innerText = "QUESTION " + questionNumber;
-  }
+        // Display the question number
+        questionNumContainer.innerText = "QUESTION " + questionNumber;
+    }
 
-  // Function to submit an answer
-  function submitAnswer(event) {
-      let userAnswer = event.target.innerText;
-      if ((userAnswer)) {
-          questionNumber++;
-      }
+    // Function to submit an answer
+    function submitAnswer(event) {
+        let userAnswer = event.target.innerText;
+        if ((userAnswer)) {
+            questionNumber++;
+        }
 
-      if (checkAnswer(userAnswer)) {
-          totalScore++;
-          console.log('score ', totalScore);
-          questionIndex++;
+        if (checkAnswer(userAnswer)) {
+            totalScore++;
+            console.log('score ', totalScore);
+            questionIndex++;
 
-      } else {
-          questionIndex++;
+        } else {
+            questionIndex++;
 
-      }
-      if (questionIndex < (QUESTIONS.length)) {
-          displayQuestion();
+        }
+        if (questionIndex < (questions.length)) {
+            displayQuestion();
 
-      } else {
-          endQuiz();
-      }
-  }
+        } else {
+            endQuiz();
+        }
+    }
 
-  // Checking if user answer is the same as the correct answer
-  function checkAnswer(userAnswer) {
-      if (userAnswer === correctAnswer) {
-          return true;
-      } else {
-          return false;
-      }
-  }
+    // Checking if user answer is the same as the correct answer
+    function checkAnswer(userAnswer) {
+        if (userAnswer === correctAnswer) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-  // Function to end the quiz
-  function endQuiz() {
-      localStorage.setItem("totalScore", totalScore);
-      window.location.href = "final-score-congrats.html";
-  }
+    // Function to end the quiz
+    function endQuiz() {
+        localStorage.setItem("totalScore", totalScore);
+        window.location.href = "final-score-congrats.html";
+    }
+
+    // Get the container for question number
+    questionNumContainer = document.getElementById("question-1");
 });

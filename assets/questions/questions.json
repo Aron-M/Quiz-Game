@@ -1,0 +1,93 @@
+[
+    {
+      "question": "What is 2 + 2?",
+      "options": ["2", "4", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "What is 5 + 7?",
+      "options": ["6", "12", "31"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "What is 15 + 27?",
+      "options": ["36", "315", "42"],
+      "correctAnswer": "42"
+    },
+    {
+      "question": "What is 51 + 117?",
+      "options": ["168", "531", "110"],
+      "correctAnswer": "168"
+    },
+    {
+      "question": "What is 151 + 1111?",
+      "options": ["2544", "831", "1262"],
+      "correctAnswer": "1262"
+    },
+    {
+      "question": "What is 10 - 3?",
+      "options": ["5", "7", "10"],
+      "correctAnswer": "7"
+    },
+    {
+      "question": "What is 25 - 12?",
+      "options": ["13", "12", "7"],
+      "correctAnswer": "13"
+    },
+    {
+      "question": "What is 50 - 30?",
+      "options": ["20", "40", "50"],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "What is 100 - 78?",
+      "options": ["22", "78", "100"],
+      "correctAnswer": "22"
+    },
+    {
+      "question": "What is 8 * 4?",
+      "options": ["32", "12", "16"],
+      "correctAnswer": "32"
+    },
+    {
+      "question": "What is 12 * 3?",
+      "options": ["36", "15", "24"],
+      "correctAnswer": "36"
+    },
+    {
+      "question": "What is 25 * 2?",
+      "options": ["40", "50", "70"],
+      "correctAnswer": "50"
+    },
+    {
+      "question": "What is 16 * 5?",
+      "options": ["80", "40", "70"],
+      "correctAnswer": "80"
+    },
+    {
+      "question": "What is 100 / 5?",
+      "options": ["25", "50", "20"],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "What is 49 / 7?",
+      "options": ["7", "14", "6"],
+      "correctAnswer": "7"
+    },
+    {
+      "question": "What is 81 / 9?",
+      "options": ["9", "18", "27"],
+      "correctAnswer": "9"
+    },
+    {
+      "question": "What is 144 / 12?",
+      "options": ["14", "12", "18"],
+      "correctAnswer": "12"
+    },
+    {
+      "question": "What is 63 / 9?",
+      "options": ["7", "9", "14"],
+      "correctAnswer": "7"
+    }
+  ]
+  
