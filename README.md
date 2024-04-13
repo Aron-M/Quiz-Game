@@ -43,10 +43,10 @@ This is version 2 of the Quiz Game, a simple web-based quiz application. In this
 ## User Experience (UX)
 ## User Stories
 
-* As user visiting the website I want to be able to participate in a math-based quiz
-* As user visiting website I want to navigate easily through the website.
-* As user I want to see rules or instructions how to use and navigate through the application.
-* As user I want to see landing page and navigate through it.
+* As a user visiting the website I want to be able to participate in a math-based quiz
+* As a user visiting website I want to navigate easily through the website.
+* As a user I want to see rules or instructions how to use and navigate through the application.
+* As a user I want to see landing page and navigate through it.
 * As a user I want to clearly see the various questions asked, together with various options to choose the answer from.
 * As user I want to see my score after I have finished the quiz.
 * As user I want to revert back to the home page once I am done with the quiz
