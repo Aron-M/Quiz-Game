@@ -26,11 +26,11 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#version1Modal">Version
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#version1Modal">Version
                             1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Version 2</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#version2Modal">Version 2</a>
                     </li>
                     <li class="nav-item ms-5">
                         <a class="nav-link" href="#"> What's coming! Version 3</a>
@@ -133,14 +133,19 @@
                 <div class="modal-body">
                     <!-- Modal body content here -->
                     <img src="assets\images\am-i-responsive-PP2.png" class="img-fluid mb-3" alt="Modal Image">
-                    <p class="mb-3 text-dark">Version 1 was very limited, with only 5 basic math questions answered in the same order giving the user a final score at the end. 
-                        There was no other functionality at all, so there was a need to add new features and functionality.</p>
+                    <p class="mb-3 text-dark">Version 1 was very limited, with only 5 basic math questions answered in
+                        the same order giving the user a final score at the end.
+                        There was no other functionality at all, so there was a need to add new features and
+                        functionality.</p>
                     <ul class="list-group">
                         <li class="list-group-item">
                             <div class="d-flex align-items-center">
-                                <img src="assets\images\home-page-mobile.png" class="me-2 img-fluid w-25" alt="Small Image">
-                                <img src="assets\images\question-page-mobile.png" class="me-2 img-fluid w-25" alt="Small Image">
-                                <img src="assets\images\tablet-final-page.png" class="me-2 img-fluid w-50" alt="Small Image">
+                                <img src="assets\images\home-page-mobile.png" class="me-2 img-fluid w-25"
+                                    alt="Small Image">
+                                <img src="assets\images\question-page-mobile.png" class="me-2 img-fluid w-25"
+                                    alt="Small Image">
+                                <img src="assets\images\tablet-final-page.png" class="me-2 img-fluid w-50"
+                                    alt="Small Image">
                             </div>
                         </li>
                     </ul>
@@ -154,7 +159,8 @@
                             Only 5 questions, each the same and asked in the same order, making it very predictive.
                         </li>
                         <li class="text-dark mb-2 ms-5">
-                            The code logic was very basic and not very reusable. There were errors displaying the final score.
+                            The code logic was very basic and not very reusable. There were errors displaying the final
+                            score.
                         </li>
                     </ul>
                 </div>
@@ -162,7 +168,59 @@
         </div>
     </div>
 
-
+    <!-- Version 2 Modal -->
+    <div class="modal fade" id="version2Modal" tabindex="-1" aria-labelledby="version2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="version1ModalLabel">Version 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal body content here -->
+                    <img src="assets\images\mathquizversion2.png" class="img-fluid mb-3" alt="Modal Image">
+                    <p class="mb-3 text-dark">Version 2 introduced new features, a cleaner layout and refactoring of the
+                        JavaScript code-logic in order to make it more dynamic and reuseable.
+                        I introduced Bootstrap styling for a cleaner look and to handle media queries as well as
+                        introduce interactive modals.</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="d-flex align-items-center">
+                                <div class="col-6">
+                                    <img src="assets\images\defensivemodal.png" class="me-2 img-fluid"
+                                        alt="Small Image">
+                                </div>
+                                <div class="col-6">
+                                    <p class="text-dark text-wrap text-break text-center fst-italic ms-2">
+                                        There needed to be a better way for user's to navigate through the application, whilst at the same time enjoy a bigger challenge with a bigger question-set being presented at random. 
+                                        Setting this up would allow for the addition of more question sets, perhaps even from different topics in the future. Keep an eye out for Version 3 in the near future!
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <h5 class="modal-title text-dark ms-5 mb-3">New Features Added:</h5>
+                <div>
+                    <ul class="list-group">
+                        <li class="text-dark mb-2 ms-5">
+                            Users now have a way to opt out of the quiz to re-attempt or quit at any time, including a
+                            defensive modal to warn user when attempting to restart or quit.
+                        </li>
+                        <li class="text-dark mb-2 ms-5">
+                            Much wider selection of questions taken from a json file at random to avoid predictiveness.
+                        </li>
+                        <li class="text-dark mb-2 ms-5">
+                            Cleaner UX and front-end layout with the implimentation of Bootstrap styling.
+                        </li>
+                        <li class="text-dark mb-2 ms-5">
+                            The code-logic now refactored and more functionality introduced.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/final-score.js"></script>
