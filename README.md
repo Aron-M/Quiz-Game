@@ -8,6 +8,9 @@ MATH QUIZ is a web application designed to test a user's knowledge in addition-b
 
 # UPDATE: Quiz Game - Version 2
 
+
+<img src="assets\images\mathquizversion2.png" alt- Version2 />
+
 ## Overview
 
 This is version 2 of the Quiz Game, a simple web-based quiz application. In this version, several improvements and changes have been made to enhance the functionality and user experience of the game.
