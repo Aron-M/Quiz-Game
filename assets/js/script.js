@@ -126,26 +126,38 @@ document.addEventListener('DOMContentLoaded', function() {
     questionNumContainer = document.getElementById("question-1");
 
     // Add event listener to start over button
-const startOverButton = document.getElementById('start-over-button');
-startOverButton.addEventListener('click', startOver);
+    const startOverButton = document.getElementById('start-over-button');
+    startOverButton.addEventListener('click', showStartOverModal);
 
-// Function to start over the quiz
-function startOver() {
-    // Reset variables
-    questionIndex = 0;
-    totalScore = 0;
-    questionNumber = 1;
+    // Function to show the start over modal
+    function showStartOverModal() {
+        const startOverModal = new bootstrap.Modal(document.getElementById('startOverModal'));
+        startOverModal.show();
+    }
 
-    // Show the home-screen content
-    homeScreen.classList.remove('d-none');
+    // Add event listener to confirm start over button inside the modal
+    const confirmStartOverButton = document.getElementById('confirmStartOverButton');
+    confirmStartOverButton.addEventListener('click', startOver);
 
-    // Hide the congrats-screen content
-    congratsScreen.classList.add('d-none');
+    // Function to start over the quiz
+    function startOver() {
+        // Reset variables
+        questionIndex = 0;
+        totalScore = 0;
+        questionNumber = 1;
 
-    // Hide the quiz-screen content
-    quizScreen.classList.add('d-none');
-}
+        // Show the home-screen content
+        homeScreen.classList.remove('d-none');
+
+        // Hide the congrats-screen content
+        congratsScreen.classList.add('d-none');
+
+        // Hide the quiz-screen content
+        quizScreen.classList.add('d-none');
+
+        // Hide the modal
+        const startOverModal = bootstrap.Modal.getInstance(document.getElementById('startOverModal'));
+        startOverModal.hide();
+    }
 
 });
-
-
