@@ -26,14 +26,14 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#version1Modal">Version
-                            1</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#version1Modal">Version 1</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="modal" data-bs-target="#version2Modal">Version 2</a>
                     </li>
                     <li class="nav-item ms-5">
-                        <a class="nav-link" href="#"> What's coming! Version 3</a>
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#version3Modal"> What's coming!
+                            Version 3</a>
                     </li>
                 </ul>
             </div>
@@ -192,8 +192,12 @@
                                 </div>
                                 <div class="col-6">
                                     <p class="text-dark text-wrap text-break text-center fst-italic ms-2">
-                                        There needed to be a better way for user's to navigate through the application, whilst at the same time enjoy a bigger challenge with a bigger question-set being presented at random. 
-                                        Setting this up would allow for the addition of more question sets, perhaps even from different topics in the future. Keep an eye out for Version 3 in the near future!
+                                        There needed to be a better way for user's to navigate through the application,
+                                        whilst at the same time enjoy a bigger challenge with a bigger question-set
+                                        being presented at random.
+                                        Setting this up would allow for the addition of more question sets, perhaps even
+                                        from different topics in the future. Keep an eye out for Version 3 in the near
+                                        future!
                                     </p>
                                 </div>
                             </div>
@@ -215,6 +219,58 @@
                         </li>
                         <li class="text-dark mb-2 ms-5">
                             The code-logic now refactored and more functionality introduced.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Version 3 Modal -->
+    <div class="modal fade" id="version3Modal" tabindex="-1" aria-labelledby="version3ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="version3ModalLabel">Version 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Modal body content here -->
+                    <p class="mb-3 text-dark">Version 3 will come with some new key features where I will implement a
+                        real-time stats tracker box to the right of the questions panel.
+                        It will display a few key statistics that updates as the user progresses through the quiz. There
+                        will also be a 'High Socres' ranking list which will track the top scoring users' winning stats
+                        as show in the mockup images below.
+                        More questions will be added to choose 20 questions at random from a pool of 100! </p>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="d-flex align-items-center">
+                                <div class="col-6">
+                                    <img src="assets\images\version3statsbox.png" class="me-2 img-fluid"
+                                        alt="Small Image">
+                                </div>
+                                <div class="col-6">
+                                    <img src="assets\images\version3statsbox.png" class="me-2 img-fluid"
+                                        alt="Small Image">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <h5 class="modal-title text-dark ms-5 mb-3">New Features To Be Added:</h5>
+                <div>
+                    <ul class="list-group">
+                        <li class="text-dark mb-2 ms-5">
+                            Live score tracking and wrong answered questions displayed as the quiz progresses.
+                        </li>
+                        <li class="text-dark mb-2 ms-5">
+                            Current and final grade and percentage calculated and displayed.
+                        </li>
+                        <li class="text-dark mb-2 ms-5">
+                            Timer feature to display users' time taken to complete the quiz.
+                        </li>
+                        <li class="text-dark mb-2 ms-5">
+                            High Scores feature to display users' high scores and time taken to complete the quiz.
                         </li>
                     </ul>
                 </div>
