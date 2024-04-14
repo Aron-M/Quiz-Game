@@ -28,7 +28,7 @@ This is version 2 of the Quiz Game, a simple web-based quiz application. In this
 
 - Interactive quiz gameplay with multiple-choice questions.
 - Dynamic question loading from an external JSON file.
-- Real-time scoring and feedback for user responses.
+- Additional questions added to questions.json file
 - Final score display and congratulations message at the end of the quiz.
 
 ## Future Features

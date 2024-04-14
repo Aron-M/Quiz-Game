@@ -14,7 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let questions = []; // Array to store questions
 
-    // Function to load questions from JSON file
+    // Function to shuffle an array using Fisher-Yates algorithm
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Function to load questions from JSON file and shuffle them
     async function loadQuestions() {
         try {
             const response = await fetch('assets/questions/questions.json');
@@ -22,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 throw new Error('Failed to load questions');
             }
             questions = await response.json();
+            questions = shuffleArray(questions); // Shuffle the questions array
             displayQuestion(); // Call displayQuestion after questions are loaded
         } catch (error) {
             console.error('Error loading questions:', error);
@@ -30,21 +40,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-// Function to hide home screen and show quiz screen
-// Function to hide home screen and show quiz screen
-function startQuiz() {
-    // Hide the home-screen content
-    homeScreen.classList.add('d-none');
-    
-    // Show the quiz-screen content
-    quizScreen.classList.remove('d-none');
-    
-    // Load questions
-    loadQuestions(); // Load questions when quiz starts
-}
-
-
-    
+    // Function to hide home screen and show quiz screen
+    function startQuiz() {
+        // Hide the home-screen content
+        homeScreen.classList.add('d-none');
+        
+        // Show the quiz-screen content
+        quizScreen.classList.remove('d-none');
+        
+        // Load questions
+        loadQuestions(); 
+    }
 
     // Add event listener to start button
     startButton.addEventListener('click', startQuiz);
