@@ -119,8 +119,33 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem("totalScore", totalScore);
         quizScreen.classList.add('d-none');
         congratsScreen.classList.remove('d-none');
+        totalScore = 0;
     }
 
     // Get the container for question number
     questionNumContainer = document.getElementById("question-1");
+
+    // Add event listener to start over button
+const startOverButton = document.getElementById('start-over-button');
+startOverButton.addEventListener('click', startOver);
+
+// Function to start over the quiz
+function startOver() {
+    // Reset variables
+    questionIndex = 0;
+    totalScore = 0;
+    questionNumber = 1;
+
+    // Show the home-screen content
+    homeScreen.classList.remove('d-none');
+
+    // Hide the congrats-screen content
+    congratsScreen.classList.add('d-none');
+
+    // Hide the quiz-screen content
+    quizScreen.classList.add('d-none');
+}
+
 });
+
+
