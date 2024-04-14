@@ -2,7 +2,7 @@
 
 <img src="assets/images/am-i-responsive-PP2.png" alt- Am I Responsive />
 
-https://aron-m.github.io/SLIGO-POD-HOUSE-RENTAL-MOBILE-FIRST/
+https://aron-m.github.io/Quiz-Game/
 
 MATH QUIZ is a web application designed to test a user's knowledge in addition-based mathematics by presenting a multiple choice quiz, consisting of 5 questions, each containing 3 options as answers. The user must attempt to answer as many questions correctly to test their aptitude.
 
